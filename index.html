@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasil Invest | João Pessoa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#0b3d2e;
+  --yellow:#ffd23f;
+  --blue:#0e4d64;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#fff;
+  color:#111;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  position:relative;
+  background:
+    linear-gradient(115deg, rgba(11,61,46,.9) 0%, rgba(11,61,46,.6) 60%, transparent 60%),
+    url('https://images.unsplash.com/photo-1606857521015-7f9fc8e6cf08') center/cover no-repeat;
+  padding:90px 70px;
+  display:flex;
+  align-items:center;
+}
+
+.hero-content{max-width:720px;}
+
+.hero h1{
+  font-size:78px;
+  font-weight:900;
+  color:#fff;
+  line-height:.95;
+}
+
+.hero p{
+  color:#fff;
+  font-size:22px;
+  margin:35px 0 45px;
+  max-width:520px;
+}
+
+.cta-btn{
+  background:var(--yellow);
+  color:#000;
+  padding:22px 55px;
+  font-weight:800;
+  text-decoration:none;
+  border-radius:6px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  display:inline-block;
+}
+
+/* HERO INFO */
+.hero-info{
+  position:absolute;
+  right:80px;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+.info-circle{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  background:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,0.18);
+}
+
+.info-circle > div{
+  max-width:140px;
+}
+
+.info-circle strong{
+  font-size:30px;
+  font-weight:900;
+  color:var(--green);
+  display:block;
+  line-height:1.05;
+  letter-spacing:-0.5px;
+  margin-bottom:6px;
+}
+
+.info-circle span{
+  font-size:14px;
+  font-weight:600;
+  color:#333;
+  line-height:1.3;
+}
+
+/* STATEMENT */
+.statement{
+  padding:140px 70px;
+  background:#f6f6f6;
+}
+
+.statement h2{
+  font-size:64px;
+  font-weight:900;
+}
+
+/* SPLIT */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  padding:140px 70px;
+  align-items:center;
+}
+
+.split svg{
+  width:240px;
+  max-width:100%;
+  margin:0 auto;
+  display:block;
+}
+
+/* ANIMAÇÃO SETA */
+@keyframes subidaElegante {
+  0%   { transform: translateY(8px); opacity:0.6; }
+  50%  { transform: translateY(-8px); opacity:1; }
+  100% { transform: translateY(8px); opacity:0.6; }
+}
+
+.seta{
+  animation: subidaElegante 2s ease-in-out infinite;
+}
+
+/* MANIFESTO */
+.manifesto{
+  background:var(--green);
+  color:#fff;
+  padding:160px 70px;
+}
+
+.manifesto p{
+  font-size:26px;
+  font-weight:600;
+  line-height:1.6;
+}
+
+/* PROCESS */
+.process{
+  padding:140px 70px;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  margin-top:60px;
+}
+
+.step{
+  background:#fff;
+  border:4px solid var(--green);
+  padding:40px;
+  font-size:18px;
+  font-weight:600;
+}
+
+/* FINAL CTA */
+.final{
+  background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1580136579312-94651dfd596d') center/cover no-repeat;
+  padding:180px 70px;
+  text-align:center;
+  color:#fff;
+}
+
+.final h2{
+  font-size:64px;
+  font-weight:900;
+  margin-bottom:30px;
+}
+
+.final p{
+  font-size:24px;
+  margin-bottom:45px;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#aaa;
+  padding:60px 70px;
+  font-size:13px;
+  line-height:1.6;
+}
+
+/* MOBILE */
+@media (max-width:900px){
+
+  .hero{
+    padding:80px 22px;
+    flex-direction:column;
+  }
+
+  .hero h1{font-size:42px;}
+  .hero p{font-size:18px;}
+
+  .cta-btn{width:100%;text-align:center;}
+
+  .hero-info{
+    position:relative;
+    transform:none;
+    right:auto;
+    top:auto;
+    flex-direction:row;
+    margin-top:40px;
+    gap:12px;
+  }
+
+  .info-circle{
+    width:105px;
+    height:105px;
+  }
+
+  .info-circle strong{
+    font-size:16px;
+    margin-bottom:4px;
+  }
+
+  .info-circle span{
+    font-size:10px;
+    line-height:1.25;
+  }
+
+  .statement,
+  .split,
+  .manifesto,
+  .process,
+  .final,
+  footer{
+    padding:80px 22px;
+  }
+
+  .split{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Brasil não é para amadores.</h1>
+    <p>
+      A Brasil Invest acompanha investidores portugueses que procuram
+      oportunidades imobiliárias em João Pessoa com visão, estrutura e sofisticação, num contexto de elevadas taxas de juro nos depósitos bancários.
+    </p>
+    <a href="#" class="cta-btn">Solicitar reunião privada</a>
+  </div>
+
+  <div class="hero-info">
+    <div class="info-circle"><div><strong>10%</strong><span>Juros bancários<br>desde</span></div></div>
+    <div class="info-circle"><div><strong>65.000€</strong><span>Casas na praia<br>desde</span></div></div>
+    <div class="info-circle"><div><strong>Cartão</strong><span>de residente<br>no Brasil</span></div></div>
+  </div>
+</section>
+
+<section class="statement">
+  <h2>João Pessoa.<br>Onde o Brasil abranda.</h2>
+</section>
+
+<section class="split">
+  <div>
+    <h3>Não vendemos promessas.</h3>
+    <p>
+      Mar, luz, tranquilidade e crescimento sustentado.
+      João Pessoa é hoje um dos destinos mais desejados do Nordeste brasileiro
+      para quem procura qualidade de vida e investimento com critério.
+    </p>
+    <p>Não vendemos promessas. Interpretamos o momento.</p>
+  </div>
+
+  <svg viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="#009b3a"/>
+    <polygon points="300,60 540,200 300,340 60,200" fill="#ffdf00"/>
+    <circle cx="300" cy="200" r="80" fill="#002776"/>
+
+    <polyline class="seta"
+      points="170,280 260,230 340,240 440,170"
+      fill="none"
+      stroke="#0b3d2e"
+      stroke-width="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+
+    <polygon class="seta"
+      points="440,170 420,180 430,150"
+      fill="#0b3d2e"/>
+  </svg>
+</section>
+
+<section class="manifesto">
+  <p>
+    Não vendemos imóveis. Acompanhamos decisões patrimoniais que exigem critério, contexto e confiança.<br><br>
+    Não prometemos rentabilidade. Ajudamos a construir investimentos conscientes, alinhados com o perfil de cada investidor em instituições bancárias sólidas.<br><br>
+    Acompanhamos processos de residência no Brasil para Portugueses, com apoio jurídico especializado, optimizando prazos e simplificando etapas, sempre de acordo com a legislação em vigor, permitindo aceder ao sistema bancário Brasileiro de forma eficiente.<br><br>
+    Ajudamos pessoas a decidir melhor.
+  </p>
+</section>
+
+<section class="process">
+  <h2 style="font-size:52px;font-weight:900;">Como trabalhamos</h2>
+  <div class="steps">
+    <div class="step">01. Análise de perfil e objetivos</div>
+    <div class="step">02. Leitura estratégica do mercado</div>
+    <div class="step">03. Coordenação com parceiros credenciados no Brasil</div>
+    <div class="step">04. Acompanhamento até à decisão final</div>
+  </div>
+</section>
+
+<section class="final">
+  <h2>Algumas decisões não se tomam com pressa.</h2>
+  <p>Marque uma conversa privada e avalie se faz sentido para si.</p>
+  <a href="#" class="cta-btn">Falar com a Brasil Invest</a>
+</section>
+
+<footer>
+  <p>
+    A Brasil Invest presta serviços de informação e acompanhamento.
+    Não exerce mediação imobiliária, consultoria financeira ou assessoria jurídica.
+    Acompanhamos processos de residência no Brasil, com apoio jurídico especializado.
+  </p>
+</footer>
+
+</body>
+</html>
